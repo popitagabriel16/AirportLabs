@@ -32,17 +32,17 @@ describe('Landing Page Tests', () => {
     expect(response.headers['content-type']).to.include('image'); // Check if the response is an image
 
     // Parse the content-length header to get the image size in bytes
-    const contentLength = parseInt(response.headers['content-length']);
+    // const contentLength = parseInt(response.headers['content-length']);
 
     // Use Cypress commands to get the image element and assert dimensions
     cy.get('img[src="' + imageUrl + '"]').should('be.visible').and(($img) => {
-    // Use the DOM element to access image properties
+
     const naturalWidth = $img[0].naturalWidth; // Get the image's natural width
     const naturalHeight = $img[0].naturalHeight; // Get the image's natural height
 
     // Assertions for dimensions (update with the expected values)
-    expect(naturalWidth).to.equal(300); // Update with the expected width
-    expect(naturalHeight).to.equal(85); // Update with the expected height
+    expect(naturalWidth).to.equal(300); 
+    expect(naturalHeight).to.equal(85);
     })
    })
   })
