@@ -14,7 +14,6 @@ describe('Contact Page Tests', () => {
         cy.get("#Message", { timeout: 20000 }).type(userData.Message);
       });
       
-
       cy.get("input[type='checkbox']", {timeout:20000}).click({ force: true });
       cy.get("input[type='submit']", {timeout:20000}).eq(0).click();
       cy.get(".form-success.w-form-done", {timeout:20000}, {timeout:20000}).scrollIntoView();
