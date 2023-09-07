@@ -5,7 +5,7 @@ describe('Contact Page Tests', () => {
 
     it('Verify that you can use Get in touch section', () => {
       cy.fixture('AirportLabsData.json').then((data) => {
-        const userData = data[0]; // Assuming you have a single set of data
+        const userData = data[0];
     
         cy.get("#Your-Name", { timeout: 20000 }).type(userData.Name);
         cy.get("#Company-Name", { timeout: 20000 }).type(userData.Company);
@@ -19,6 +19,5 @@ describe('Contact Page Tests', () => {
       cy.get(".form-success.w-form-done", {timeout:20000}, {timeout:20000}).scrollIntoView();
       cy.get(".form-success.w-form-done", {timeout:20000}).should('include.text', "Thanks for getting in contact with us!");
     })
-  
   
   })

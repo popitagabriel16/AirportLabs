@@ -30,5 +30,4 @@ describe('Social-Media Page Tests', () => {
       // cy.title({timeout:20000}).should('eq', 'LinkedIn');
     })
   
-  
   })
