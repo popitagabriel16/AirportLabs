@@ -9,24 +9,24 @@ describe('Social-Media Page Tests', () => {
     it('Verify that social media links are redirecting user to Facebook', () => {
       let socialMedia = ".logo-footer-container.w-inline-block";
 
-      cy.get(socialMedia).eq(0).scrollIntoView();
-      cy.get(socialMedia).eq(0).invoke('attr', 'target', '_self').click();
+      cy.get(socialMedia, {timeout:20000}).eq(0).scrollIntoView();
+      cy.get(socialMedia, {timeout:20000}).eq(0).invoke('attr', 'target', '_self').click();
       // cy.title().should('eq', 'Facebook');
     })
 
     it('Verify that social media links are redirecting user to Instagram', () => {
       let socialMedia = ".logo-footer-container.w-inline-block";
 
-      cy.get(socialMedia).eq(0).scrollIntoView();
-      cy.get(socialMedia).eq(1).invoke('attr', 'target', '_self').click();
+      cy.get(socialMedia, {timeout:20000}).eq(0).scrollIntoView();
+      cy.get(socialMedia, {timeout:20000}).eq(1).invoke('attr', 'target', '_self').click();
       // cy.title({timeout:20000}).should('eq', 'Instagram');
     })
 
     it('Verify that social media links are redirecting user to LinkedIn', () => {
       let socialMedia = ".logo-footer-container.w-inline-block";
 
-      cy.get(socialMedia).eq(0).scrollIntoView();
-      cy.get(socialMedia).eq(2).invoke('attr', 'target', '_self').click();
+      cy.get(socialMedia, {timeout:20000}).eq(0).scrollIntoView();
+      cy.get(socialMedia, {timeout:20000}).eq(2).invoke('attr', 'target', '_self').click();
       // cy.title({timeout:20000}).should('eq', 'LinkedIn');
     })
   

@@ -31,9 +31,6 @@ describe('Landing Page Tests', () => {
     expect(response.status).to.equal(200); // Check if the image loads successfully
     expect(response.headers['content-type']).to.include('image'); // Check if the response is an image
 
-    // Parse the content-length header to get the image size in bytes
-    // const contentLength = parseInt(response.headers['content-length']);
-
     // Use Cypress commands to get the image element and assert dimensions
     cy.get('img[src="' + imageUrl + '"]').should('be.visible').and(($img) => {
 
