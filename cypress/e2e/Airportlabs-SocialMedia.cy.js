@@ -10,16 +10,13 @@ describe('Social-Media Page Tests', () => {
 
   it('Verify that social media links are redirecting users to Facebook', () => {
     SocialMediaPage.clickFacebookLink();
-    // Add your assertions here for Facebook
   })
 
   it('Verify that social media links are redirecting users to Instagram', () => {
     SocialMediaPage.clickInstagramLink();
-    // Add your assertions here for Instagram
   })
 
   it('Verify that social media links are redirecting users to LinkedIn', () => {
     SocialMediaPage.clickLinkedInLink();
-    // Add your assertions here for LinkedIn
   })
 })
